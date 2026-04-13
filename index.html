@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f0f10" />
+  <meta name="description" content="CashDrive – denní motivace na peníze, disciplínu a akci." />
+  <title>CashDrive</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">CashDrive</p>
+        <h1>Vydělávej. Rychleji. Chytřeji.</h1>
+      </div>
+      <button id="themeToggle" class="ghost-btn" aria-label="Přepnout motiv">◐</button>
+    </header>
+
+    <main>
+      <section class="hero card glow">
+        <p class="small-label">Dnešní money impuls</p>
+        <h2 id="dailyQuote">Dnes nehledej motivaci. Hledej příležitost.</h2>
+        <p id="quoteSub" class="muted">Každý malý krok dnes může být cashflow zítra.</p>
+        <div class="hero-actions">
+          <button id="boostBtn" class="primary-btn">Nakopni mě</button>
+          <button id="saveWinBtn" class="secondary-btn">Zapsat výhru</button>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="card stat-card">
+          <p class="small-label">Streak</p>
+          <div class="stat-value"><span id="streakValue">0</span> dní</div>
+          <p class="muted">Kolik dní po sobě sis otevřel mindset na výkon.</p>
+        </article>
+
+        <article class="card stat-card">
+          <p class="small-label">Dnešní fokus</p>
+          <div class="stat-value" id="focusValue">Najdi 1 způsob, jak vydělat víc.</div>
+          <p class="muted">Méně chaosu, víc směru.</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <div>
+            <p class="small-label">Tvoje dnešní mise</p>
+            <h3>3 akce pro peníze</h3>
+          </div>
+          <button id="newTasksBtn" class="ghost-btn">Obměnit</button>
+        </div>
+        <div id="tasks" class="tasks"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <div>
+            <p class="small-label">Zapisuj progres</p>
+            <h3>Dnešní výhra</h3>
+          </div>
+        </div>
+        <textarea id="winInput" placeholder="Např. napsal jsem 3 lidem, našel zakázku, udělal první krok..."></textarea>
+        <button id="saveNoteBtn" class="primary-btn full-btn">Uložit dnešní výhru</button>
+        <p id="savedNote" class="muted saved-note"></p>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <div>
+            <p class="small-label">Realita</p>
+            <h3>Inspirace místo keců</h3>
+          </div>
+        </div>
+        <ul id="inspoList" class="inspo-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
